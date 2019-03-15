@@ -1,5 +1,5 @@
-from src.restapis.drf.todolist_api.todolist.models import Task
-from src.restapis.drf.todolist_api.todolist.serializers import TaskSerializer
+from .models import Task
+from .serializers import TaskSerializer
 
 
 class Payload:
