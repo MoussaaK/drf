@@ -1,0 +1,10 @@
+Django
+pytz
+django-cors-headers
+djangorestframework
+django-enumchoicefield
+nested-lookup
+pymongo
+Pygments
+Markdown
+httpie
