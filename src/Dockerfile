@@ -1,14 +1,20 @@
 #Using Python 3
 FROM python:3.8-rc
 
+#work directory
 WORKDIR /restapis
 
 COPY . /restapis
 
-RUN pip --proxy http://proxy.rd.francetelecom.fr:8080 install -U -r requirements.txt
+CMD["pwd"]
 
-EXPOSE 80
+#install requirements
+RUN pip --proxy http://x.x.x.x install -U -r requirements.txt
 
-ENV NAME World
+EXPOSE 8000
 
-CMD ["python", "restapis/drf/todolist_api/manage.py", "runserver"]
+ENV NAME todo
+
+ENTRYPOINT ["python", "./drf/todolist_api/manage.py"]
+
+CMD ["runserver", "0.0.0.0:8000"]
