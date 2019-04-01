@@ -2,19 +2,13 @@
 FROM python:3.8-rc
 
 #work directory
-WORKDIR /restapis
+WORKDIR /todoapp
 
-COPY . /restapis
-
-CMD["pwd"]
+COPY . /todoapp
 
 #install requirements
-RUN pip --proxy http://x.x.x.x install -U -r requirements.txt
+RUN pip install -U -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 80
 
-ENV NAME todo
-
-ENTRYPOINT ["python", "./drf/todolist_api/manage.py"]
-
-CMD ["runserver", "0.0.0.0:8000"]
+ENV NAME TodoENV
