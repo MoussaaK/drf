@@ -9,6 +9,4 @@ COPY . /todoapp
 #install requirements
 RUN pip install -U -r requirements.txt
 
-EXPOSE 80
-
 ENV NAME TodoENV
